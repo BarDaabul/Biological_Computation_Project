@@ -69,10 +69,11 @@ def writeSubgraphsWithCountingToFile(subGraphs, countAppearances, n):
             for edge in subGraph.edges:
                 file.write(f"{edge[0]} {edge[1]}\n")
 
-    print(f"Subgraphs with counting written to {filename} successfully!")
+    print(f"The sub-graphs with the counting were written to {filename} successfully!")
     return 0
 
 
 if __name__ == '__main__':
-    n = 4
+    # Test the program
+    n = 4  # The required number of nodes
     countAppearancesOfMotifsInGraph(n, "graph.txt")
