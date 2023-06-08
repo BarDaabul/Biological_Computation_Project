@@ -1,6 +1,6 @@
 import networkx as nx
 from itertools import permutations
-import timeit##$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+import timeit
 
 
 # A function that gets a size n (positive int)
@@ -78,18 +78,17 @@ def writeSubgraphsToFile(subGraphs, n):
             for edge in subGraph.edges:
                 file.write(f"{edge[0]} {edge[1]}\n")
 
-    print(f"Subgraphs written to {filename} successfully!")
+    print(f"The sub-graphs were written to {filename} successfully!")
     return 0
 
 
 if __name__ == '__main__':
-    # Test the function
-    numOfNodes = 5
+    # Test the program
+    n = 4  # The required number of nodes
 
-    start_time = timeit.default_timer()  ##$$$$$$$$$$$$$$$$$
-    outputAllConnectedSubGraphs(numOfNodes)
+    startTime = timeit.default_timer()
+    outputAllConnectedSubGraphs(n)
+    endTime = timeit.default_timer()
 
-    end_time = timeit.default_timer()  ##$$$$$$$$$$$$$$$$$
-
-    execution_time = end_time - start_time  ##$$$$$$$$$$$$$$$$$
-    print("Execution Time for numOfNodes = ", numOfNodes, "is ", execution_time, "seconds")  ##$$$$$$$$$$$$$$$$$
+    executionTime = endTime - startTime
+    print("The execution time for n = ", n, "is ", executionTime, "seconds")
